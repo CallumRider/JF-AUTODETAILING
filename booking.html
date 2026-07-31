@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a mobile car valet in Colchester and surrounding areas.">
+  <meta name="theme-color" content="#0b0c0e">
+  <title>Book Online | JFAUTODETAILING</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="logo" href="index.html" aria-label="JFAUTODETAILING homepage">JF<span>AUTO</span>DETAILING</a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="main-navigation">
+        <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="booking.html">Book Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+<section class="page-hero"><div class="container"><span class="eyebrow">Online booking</span><h1>Book your valet in a few steps.</h1><p>This front-end template shows the intended journey. Connect it to a real booking service, email handler or database before launch.</p></div></section>
+<section class="section"><div class="container"><form class="form-card reveal" data-booking-form novalidate>
+<div class="step-indicator" aria-label="Booking progress"><div class="step-dot active">1. Vehicle</div><div class="step-dot">2. Service</div><div class="step-dot">3. Date</div><div class="step-dot">4. Address</div><div class="step-dot">5. Details</div></div>
+<section class="booking-step active"><h2>Vehicle type</h2><p style="margin:.5rem 0 1.5rem">Tell us what we will be working on.</p><div class="form-grid"><div class="form-group"><label for="vehicle-size">Vehicle size</label><select id="vehicle-size" required><option value="">Select one</option><option>Small</option><option>Medium</option><option>Large</option><option>Van / commercial</option></select></div><div class="form-group"><label for="vehicle-model">Make and model</label><input id="vehicle-model" placeholder="e.g. Ford Fiesta" required></div><div class="form-group full"><label for="condition">Current condition</label><textarea id="condition" placeholder="Text here — dirt level, stains, pet hair, concerns"></textarea></div></div><div class="form-actions"><span></span><button class="btn btn-primary" type="button" data-next>Next</button></div></section>
+<section class="booking-step"><h2>Select a service</h2><p style="margin:.5rem 0 1.5rem">Choose the closest package. Final details can be confirmed later.</p><div class="form-group"><label for="service">Service</label><select id="service" required><option value="">Select one</option><option>Exterior Wash</option><option>Interior Valet</option><option>Full Valet</option><option>Deep Clean</option><option>Machine Polishing</option><option>Ceramic Coating</option><option>Fleet / Commercial</option></select></div><div class="form-actions"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn btn-primary" type="button" data-next>Next</button></div></section>
+<section class="booking-step"><h2>Date and time</h2><p style="margin:.5rem 0 1.5rem">Replace the basic fields with live availability when the booking platform is connected.</p><div class="form-grid"><div class="form-group"><label for="booking-date">Preferred date</label><input id="booking-date" type="date" required></div><div class="form-group"><label for="booking-time">Preferred time</label><select id="booking-time" required><option value="">Select one</option><option>Morning</option><option>Afternoon</option><option>Specific time — add options</option></select></div></div><div class="form-actions"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn btn-primary" type="button" data-next>Next</button></div></section>
+<section class="booking-step"><h2>Service address</h2><p style="margin:.5rem 0 1.5rem">Used for mobile valeting and checking the travel area.</p><div class="form-grid"><div class="form-group full"><label for="address">Address</label><input id="address" placeholder="House number and street" required></div><div class="form-group"><label for="town">Town / village</label><input id="town" placeholder="Colchester" required></div><div class="form-group"><label for="postcode">Postcode</label><input id="postcode" placeholder="CO0 0AA" required></div></div><div class="form-actions"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn btn-primary" type="button" data-next>Next</button></div></section>
+<section class="booking-step"><h2>Your details</h2><p style="margin:.5rem 0 1.5rem">Add customer contact details and any final notes.</p><div class="form-grid"><div class="form-group"><label for="name">Name</label><input id="name" autocomplete="name" required placeholder="Your name"></div><div class="form-group"><label for="phone">Phone</label><input id="phone" type="tel" autocomplete="tel" required placeholder="Phone number"></div><div class="form-group full"><label for="email">Email</label><input id="email" type="email" autocomplete="email" required placeholder="you@example.com"></div><div class="form-group full"><label for="notes">Notes</label><textarea id="notes" placeholder="Text here — access, parking, water/electricity, special requests"></textarea></div></div><div class="form-actions"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn btn-primary" type="submit">Confirm booking request</button></div><div class="success-message" role="status"><h3>Booking request received — template only</h3><p>Connect this form to your chosen booking system to send a real confirmation.</p></div></section>
+</form></div></section>
+</main>
+<div class="mobile-actions" aria-label="Quick contact actions">
+  <a class="btn btn-secondary" href="tel:+440000000000">Call</a>
+  <a class="btn btn-primary" href="booking.html">Book Now</a>
+</div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3 class="logo">JF<span>AUTO</span>DETAILING</h3>
+        <p>Professional mobile car valeting in Colchester, Essex and surrounding areas. Replace this sentence with the final business description.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="booking.html">Book online</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Information</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About us</a></li>
+          <li><a href="areas.html">Areas covered</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+440000000000">Phone: 00000 000000</a></li>
+          <li><a href="mailto:hello@example.com">Email: hello@example.com</a></li>
+          <li>Hours: Text here</li>
+          <li>Colchester, Essex</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> JFAUTODETAILING. All rights reserved.</span>
+      <span>Privacy Policy · Terms · Cookie Policy</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
