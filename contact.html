@@ -4,19 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact JFAUTODETAILING for a quote or booking.">
-  <meta name="theme-color" content="#0b0c0e">
+  <meta name="theme-color" content="#0d1014">
   <title>Contact | JFAUTODETAILING</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/site-config.js" defer></script>
   <script src="assets/js/script.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="container nav-wrap">
-    <a class="logo" href="index.html" aria-label="JFAUTODETAILING homepage">JF<span>AUTO</span>DETAILING</a>
+    <a class="logo" href="index.html" aria-label="JFAUTODETAILING homepage"><img class="logo-img" src="assets/images/jf-logo.png" alt="JF Auto Detailing logo" width="997" height="434" decoding="async" fetchpriority="high"></a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
     <nav aria-label="Main navigation">
       <ul class="nav-links" id="main-navigation">
@@ -28,19 +30,19 @@
 </header>
 <main id="main-content">
 <section class="page-hero"><div class="container"><span class="eyebrow">Contact</span><h1>Tell us what your car needs.</h1><p>Replace the placeholder phone number, email, WhatsApp link, social links and opening hours before launch.</p></div></section>
-<section class="section"><div class="container"><div class="contact-cards"><article class="card contact-card"><div class="card-icon">☎</div><h3>Call</h3><p>Speak directly about availability or a quote.</p><a href="tel:+440000000000">00000 000000</a></article><article class="card contact-card"><div class="card-icon">@</div><h3>Email</h3><p>Send vehicle details and images.</p><a href="mailto:hello@example.com">hello@example.com</a></article><article class="card contact-card"><div class="card-icon">WA</div><h3>WhatsApp</h3><p>Add a direct WhatsApp business link.</p><a href="#">Open WhatsApp</a></article></div></div></section>
-<section class="section section-dark"><div class="container grid-2"><form class="form-card" action="#" method="post"><h2>Request a quote</h2><p style="margin:.5rem 0 1.5rem">This form needs a form service or server-side handler.</p><div class="form-grid"><div class="form-group"><label for="contact-name">Name</label><input id="contact-name" name="name" required placeholder="Your name"></div><div class="form-group"><label for="contact-phone">Phone</label><input id="contact-phone" name="phone" type="tel" required placeholder="Phone number"></div><div class="form-group full"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" required placeholder="you@example.com"></div><div class="form-group full"><label for="contact-message">Message</label><textarea id="contact-message" name="message" required placeholder="Vehicle, service required, postcode and preferred date"></textarea></div><div class="form-group full"><label for="contact-photo">Vehicle photos</label><input id="contact-photo" name="photos" type="file" multiple accept="image/*"></div></div><button class="btn btn-primary" type="submit" style="margin-top:1.2rem">Send enquiry</button></form><div><div class="placeholder-media placeholder-map"><span>[ GOOGLE MAP HERE ]</span></div><div class="card" style="margin-top:1rem"><h3>Opening hours</h3><p>Monday–Friday: Text here<br>Saturday: Text here<br>Sunday: Text here</p><h3 style="margin-top:1.2rem">Social media</h3><p>Instagram · Facebook · TikTok — add links here</p></div></div></div></section>
+<section class="section"><div class="container"><div class="contact-cards"><article class="card contact-card"><div class="card-icon">☎</div><h3>Call</h3><p>Speak directly about availability or a quote.</p><a data-phone-link href="tel:+440000000000"><span data-config-text="phoneDisplay">00000 000000</span></a></article><article class="card contact-card"><div class="card-icon">@</div><h3>Email</h3><p>Send vehicle details and images.</p><a data-email-link href="mailto:hello@example.com"><span data-config-text="email">hello@example.com</span></a></article><article class="card contact-card"><div class="card-icon">WA</div><h3>WhatsApp</h3><p>Add a direct WhatsApp business link.</p><a data-whatsapp-link href="#">Open WhatsApp</a></article></div></div></section>
+<section class="section section-dark"><div class="container grid-2"><form class="form-card" action="#" method="post" data-demo-form><h2>Request a quote</h2><p style="margin:.5rem 0 1.5rem">This form needs a form service or server-side handler.</p><div class="form-grid"><div class="form-group"><label for="contact-name">Name</label><input id="contact-name" name="name" required placeholder="Your name"></div><div class="form-group"><label for="contact-phone">Phone</label><input id="contact-phone" name="phone" type="tel" required placeholder="Phone number"></div><div class="form-group full"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" required placeholder="you@example.com"></div><div class="form-group full"><label for="contact-message">Message</label><textarea id="contact-message" name="message" required placeholder="Vehicle, service required, postcode and preferred date"></textarea></div><div class="form-group full"><label for="contact-photo">Vehicle photos</label><input id="contact-photo" name="photos" type="file" multiple accept="image/*"></div></div><button class="btn btn-primary" type="submit" style="margin-top:1.2rem">Send enquiry</button><div class="success-message" data-form-message role="status"><h3>Enquiry form ready for connection</h3><p>This template has validated your details, but it will not send them until a form service or backend is connected.</p></div></form><div><div class="placeholder-media placeholder-map"><span>[ GOOGLE MAP HERE ]</span></div><div class="card" style="margin-top:1rem"><h3>Opening hours</h3><p>Monday–Friday: <span data-config-text="hours.weekdays">Text here</span><br>Saturday: <span data-config-text="hours.saturday">Text here</span><br>Sunday: <span data-config-text="hours.sunday">Text here</span></p><h3 style="margin-top:1.2rem">Social media</h3><p><a data-social-link="instagram" href="#">Instagram</a> · <a data-social-link="facebook" href="#">Facebook</a> · <a data-social-link="tiktok" href="#">TikTok</a></p></div></div></div></section>
 </main>
 <div class="mobile-actions" aria-label="Quick contact actions">
-  <a class="btn btn-secondary" href="tel:+440000000000">Call</a>
+  <a class="btn btn-secondary" data-phone-link href="tel:+440000000000">Call</a>
   <a class="btn btn-primary" href="booking.html">Book Now</a>
 </div>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <h3 class="logo">JF<span>AUTO</span>DETAILING</h3>
-        <p>Professional mobile car valeting in Colchester, Essex and surrounding areas. Replace this sentence with the final business description.</p>
+        <a class="logo footer-logo" href="index.html" aria-label="JFAUTODETAILING homepage"><img class="logo-img" src="assets/images/jf-logo.png" alt="JF Auto Detailing logo" width="997" height="434" loading="lazy" decoding="async"></a>
+        <p><span data-config-text="footerDescription">Professional mobile car valeting in Colchester, Essex and surrounding areas. Replace this sentence with the final business description.</span></p>
       </div>
       <div>
         <h4>Quick links</h4>
@@ -63,10 +65,10 @@
       <div>
         <h4>Contact</h4>
         <ul class="footer-links">
-          <li><a href="tel:+440000000000">Phone: 00000 000000</a></li>
-          <li><a href="mailto:hello@example.com">Email: hello@example.com</a></li>
-          <li>Hours: Text here</li>
-          <li>Colchester, Essex</li>
+          <li><a data-phone-link href="tel:+440000000000">Phone: <span data-config-text="phoneDisplay">00000 000000</span></a></li>
+          <li><a data-email-link href="mailto:hello@example.com">Email: <span data-config-text="email">hello@example.com</span></a></li>
+          <li>Hours: <span data-config-text="hours.weekdays">Text here</span></li>
+          <li data-config-text="location">Colchester, Essex</li>
         </ul>
       </div>
     </div>

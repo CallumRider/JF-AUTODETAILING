@@ -29,3 +29,20 @@ EDITING
 - Main colours and layout: assets/css/style.css
 - Interactions: assets/js/script.js
 - Page content: edit the matching .html file
+
+PROJECT RECORDS
+- PROJECT-MASTER-CHECKLIST.md: complete status and task checklist
+- PROJECT-FILE-INVENTORY.md: exact file inventory with sizes and hashes
+- PROJECT-STATE.json: machine-readable project snapshot
+
+QUICK EDITING
+- Common phone, email, hours, location and social links: assets/js/site-config.js
+- Main colours and layout: assets/css/style.css
+- Logo expected by the site: assets/images/jf-logo.png
+- Booking fields and steps: booking.html
+- Booking behaviour: assets/js/script.js
+
+PERFORMANCE
+- The logo has been cropped and compressed for the website.
+- External Google font loading has been removed.
+- Reveal animations now fail safely, so content remains visible if JavaScript is slow or disabled.

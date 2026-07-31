@@ -4,19 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Frequently asked questions about mobile car valeting.">
-  <meta name="theme-color" content="#0b0c0e">
+  <meta name="theme-color" content="#0d1014">
   <title>FAQs | JFAUTODETAILING</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/site-config.js" defer></script>
   <script src="assets/js/script.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="container nav-wrap">
-    <a class="logo" href="index.html" aria-label="JFAUTODETAILING homepage">JF<span>AUTO</span>DETAILING</a>
+    <a class="logo" href="index.html" aria-label="JFAUTODETAILING homepage"><img class="logo-img" src="assets/images/jf-logo.png" alt="JF Auto Detailing logo" width="997" height="434" decoding="async" fetchpriority="high"></a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
     <nav aria-label="Main navigation">
       <ul class="nav-links" id="main-navigation">
@@ -32,15 +34,15 @@
 <article class="faq-item reveal"><button class="faq-question" type="button" aria-expanded="false">How long does a valet take?</button><div class="faq-answer"><p>Text here — give realistic time ranges by package and explain that vehicle condition may affect duration.</p></div></article><article class="faq-item reveal"><button class="faq-question" type="button" aria-expanded="false">Do you need access to water and electricity?</button><div class="faq-answer"><p>Text here — state exactly what equipment the mobile setup carries and what the customer needs to provide.</p></div></article><article class="faq-item reveal"><button class="faq-question" type="button" aria-expanded="false">Do you travel to me?</button><div class="faq-answer"><p>Yes, the source describes a mobile service around Colchester and surrounding areas. Add the confirmed radius and any travel charges.</p></div></article><article class="faq-item reveal"><button class="faq-question" type="button" aria-expanded="false">Which payment methods do you accept?</button><div class="faq-answer"><p>The planned methods are card, Apple Pay, Google Pay, cash, bank transfer and gift vouchers. Confirm availability before publishing.</p></div></article><article class="faq-item reveal"><button class="faq-question" type="button" aria-expanded="false">What happens if it rains?</button><div class="faq-answer"><p>Text here — explain the real bad-weather policy, shelter requirements, postponement process and customer notification.</p></div></article><article class="faq-item reveal"><button class="faq-question" type="button" aria-expanded="false">How should I prepare my vehicle?</button><div class="faq-answer"><p>Text here — ask customers to remove personal belongings and provide clear access around the vehicle.</p></div></article><article class="faq-item reveal"><button class="faq-question" type="button" aria-expanded="false">Can you remove every stain or scratch?</button><div class="faq-answer"><p>Text here — set realistic expectations and explain that results depend on material, damage and previous treatments.</p></div></article><article class="faq-item reveal"><button class="faq-question" type="button" aria-expanded="false">Do you clean company fleets?</button><div class="faq-answer"><p>Yes, fleet and commercial services are included in the planned service range. Add minimum quantities, frequency and quote process.</p></div></article><article class="faq-item reveal"><button class="faq-question" type="button" aria-expanded="false">Can I buy a gift voucher?</button><div class="faq-answer"><p>Gift vouchers are listed as an accepted option. Add values, expiry terms, delivery method and redemption instructions.</p></div></article><article class="faq-item reveal"><button class="faq-question" type="button" aria-expanded="false">How do I change or cancel a booking?</button><div class="faq-answer"><p>Text here — add the notice period, cancellation fee and contact method.</p></div></article></div></div></section>
 </main>
 <div class="mobile-actions" aria-label="Quick contact actions">
-  <a class="btn btn-secondary" href="tel:+440000000000">Call</a>
+  <a class="btn btn-secondary" data-phone-link href="tel:+440000000000">Call</a>
   <a class="btn btn-primary" href="booking.html">Book Now</a>
 </div>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <h3 class="logo">JF<span>AUTO</span>DETAILING</h3>
-        <p>Professional mobile car valeting in Colchester, Essex and surrounding areas. Replace this sentence with the final business description.</p>
+        <a class="logo footer-logo" href="index.html" aria-label="JFAUTODETAILING homepage"><img class="logo-img" src="assets/images/jf-logo.png" alt="JF Auto Detailing logo" width="997" height="434" loading="lazy" decoding="async"></a>
+        <p><span data-config-text="footerDescription">Professional mobile car valeting in Colchester, Essex and surrounding areas. Replace this sentence with the final business description.</span></p>
       </div>
       <div>
         <h4>Quick links</h4>
@@ -63,10 +65,10 @@
       <div>
         <h4>Contact</h4>
         <ul class="footer-links">
-          <li><a href="tel:+440000000000">Phone: 00000 000000</a></li>
-          <li><a href="mailto:hello@example.com">Email: hello@example.com</a></li>
-          <li>Hours: Text here</li>
-          <li>Colchester, Essex</li>
+          <li><a data-phone-link href="tel:+440000000000">Phone: <span data-config-text="phoneDisplay">00000 000000</span></a></li>
+          <li><a data-email-link href="mailto:hello@example.com">Email: <span data-config-text="email">hello@example.com</span></a></li>
+          <li>Hours: <span data-config-text="hours.weekdays">Text here</span></li>
+          <li data-config-text="location">Colchester, Essex</li>
         </ul>
       </div>
     </div>
