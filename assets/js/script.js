@@ -27,6 +27,36 @@ document.querySelectorAll('[data-social-link]').forEach((link) => {
   if (url) link.href = url;
 });
 
+
+const applyOptionalLink = (selector, url) => {
+  document.querySelectorAll(selector).forEach((link) => {
+    if (url && url !== '#') {
+      link.href = url;
+      link.hidden = false;
+    } else {
+      link.hidden = true;
+    }
+  });
+};
+
+applyOptionalLink('[data-google-business-link]', config.googleBusiness?.profileUrl);
+applyOptionalLink('[data-google-review-link]', config.googleBusiness?.reviewUrl);
+applyOptionalLink('[data-google-maps-link]', config.googleBusiness?.mapsUrl);
+
+document.querySelectorAll('[data-google-map]').forEach((slot) => {
+  const embedUrl = config.googleBusiness?.mapsEmbedUrl;
+  if (!embedUrl || !embedUrl.startsWith('https://')) return;
+
+  const iframe = document.createElement('iframe');
+  iframe.src = embedUrl;
+  iframe.title = 'JF Auto Detailing service area on Google Maps';
+  iframe.loading = 'lazy';
+  iframe.referrerPolicy = 'no-referrer-when-downgrade';
+  iframe.allowFullscreen = true;
+  slot.replaceChildren(iframe);
+  slot.classList.add('google-map-slot');
+});
+
 const siteHeader = document.querySelector('.site-header');
 const updateHeader = () => siteHeader?.classList.toggle('scrolled', window.scrollY > 12);
 updateHeader();
@@ -58,22 +88,7 @@ if (menuToggle && navLinks) {
   });
 }
 
-const revealItems = document.querySelectorAll('.reveal');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if (!reducedMotion && 'IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px 80px' });
-
-  revealItems.forEach((item) => observer.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add('visible'));
-}
 
 const range = document.querySelector('.ba-range');
 const afterLayer = document.querySelector('.after-layer');

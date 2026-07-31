@@ -28,6 +28,14 @@ window.JF_SITE_CONFIG = {
     tiktok: "#"
   },
 
+  // Add these once the Google Business Profile is verified.
+  googleBusiness: {
+    profileUrl: "#",
+    reviewUrl: "#",
+    mapsUrl: "#",
+    mapsEmbedUrl: ""
+  },
+
   footerDescription:
     "Professional mobile car valeting in Colchester, Essex and surrounding areas. Replace this sentence with the final business description."
 };
