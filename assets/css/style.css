@@ -1688,41 +1688,46 @@ textarea {
   }
 }
 
-/* Final header, spacing and placeholder refinement — 1 August 2026 */
+/* Final proportional header and page rhythm fix — 1 August 2026 */
 :root {
-  --header-height: 96px;
+  --header-height: 100px;
 }
 
-/* A slightly wider header canvas lets the larger brand mark breathe. */
+/* Keep the header wide enough for the brand without letting it dominate. */
 .site-header .container {
   width: min(calc(100% - clamp(1.5rem, 4vw, 3rem)), 1240px);
 }
 
 .nav-wrap {
-  gap: clamp(1.1rem, 2.2vw, 2rem);
+  min-height: var(--header-height);
+  gap: clamp(1.5rem, 2.6vw, 2.5rem);
 }
 
 .nav-wrap nav {
   margin-left: auto;
 }
 
-/* Show the same logo at roughly 2.5x its former width, while cropping the
-   small strapline from the header only. The full logo remains in the footer. */
+/* Display the complete logo. The previous version cropped the lower wording. */
 .site-header .logo {
-  width: 270px;
-  height: 84px;
-  overflow: hidden;
+  display: flex;
+  width: 210px;
+  height: auto;
+  flex: 0 0 210px;
+  align-items: center;
+  overflow: visible;
 }
 
 .site-header .logo-img {
-  width: 270px;
-  max-width: none;
+  display: block;
+  width: 210px;
+  max-width: 100%;
   max-height: none;
   height: auto;
-  flex: 0 0 auto;
+  object-fit: contain;
 }
 
 .footer-logo {
+  display: inline-flex;
   width: auto;
   height: auto;
   overflow: visible;
@@ -1731,9 +1736,10 @@ textarea {
 .footer-logo .logo-img {
   width: min(184px, 100%);
   max-width: 100%;
+  height: auto;
 }
 
-/* Keep navigation visually balanced beside the larger logo. */
+/* Keep the navigation compact and evenly aligned beside the logo. */
 .nav-links {
   align-items: center;
 }
@@ -1741,38 +1747,45 @@ textarea {
 .nav-cta {
   display: flex;
   align-items: center;
-  margin-left: 0.75rem;
+  margin-left: 0.65rem;
 }
 
-/* Fixed vertical centring removes the uneven orange above/below the label. */
 .btn {
+  display: inline-flex;
   min-height: 46px;
   padding: 0 1.18rem;
-  line-height: 1.2;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
 }
 
+/* Optical centring: the slight top inset moves the lettering down visually. */
 .nav-cta .btn {
-  height: 42px;
-  min-height: 42px;
-  padding: 1px 1.15rem 0;
+  height: 48px;
+  min-height: 48px;
+  padding: 3px 1.35rem 0;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
   white-space: nowrap;
 }
 
-/* Bring back the understated logo watermark in every empty media area. */
+/* Restore the subtle brand watermark in empty image positions. */
 .placeholder-media::before {
   position: absolute;
-  inset: 18%;
+  inset: 20%;
   z-index: 0;
   background: url("../images/jf-logo.webp") center / contain no-repeat;
   content: "";
-  opacity: 0.13;
+  opacity: 0.12;
   filter: grayscale(0.12) saturate(0.82);
   pointer-events: none;
 }
 
 .placeholder-media > span {
+  position: relative;
   z-index: 1;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.82);
 }
 
 .google-map-slot::before {
@@ -1786,16 +1799,61 @@ textarea {
   border: 0;
 }
 
-/* Small rhythm corrections after enlarging the header. */
-.hero-grid {
-  padding-top: clamp(4.6rem, 7vw, 6.2rem);
+/* Tighten the end-of-page callout so it does not float in a large empty band. */
+.section-sm {
+  padding: clamp(2.2rem, 3.5vw, 3rem) 0;
 }
 
-.section-header + .grid-2,
-.section-header + .grid-3,
-.section-header + .grid-4,
-.section-header + .gallery-grid {
-  margin-top: 0;
+.cta-band {
+  min-height: 142px;
+  padding: clamp(1.6rem, 2.6vw, 2rem) clamp(1.5rem, 3vw, 2.25rem);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.cta-band h2 {
+  max-width: 720px;
+  font-size: clamp(1.9rem, 3vw, 2.55rem);
+}
+
+.cta-band p {
+  margin-top: 0.5rem;
+}
+
+.cta-band .hero-actions {
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cta-band .btn {
+  min-width: 142px;
+  min-height: 48px;
+}
+
+/* Footer spacing now follows the same rhythm as the rest of the page. */
+.site-footer {
+  padding: clamp(3.2rem, 5vw, 4rem) 0 1.25rem;
+}
+
+.footer-grid {
+  align-items: start;
+  gap: clamp(2rem, 4vw, 3.2rem);
+}
+
+.footer-logo {
+  margin-bottom: 1.15rem;
+}
+
+.footer-grid > div:first-child p {
+  max-width: 300px;
+}
+
+.footer-bottom {
+  margin-top: clamp(2.2rem, 4vw, 3rem);
+}
+
+.hero-grid {
+  padding-top: clamp(4.5rem, 7vw, 6rem);
 }
 
 .hero-actions,
@@ -1805,16 +1863,16 @@ textarea {
 
 @media (max-width: 1100px) {
   :root {
-    --header-height: 88px;
+    --header-height: 90px;
   }
 
   .site-header .logo {
-    width: 230px;
-    height: 72px;
+    width: 190px;
+    flex-basis: 190px;
   }
 
   .site-header .logo-img {
-    width: 230px;
+    width: 190px;
   }
 
   .nav-links > li:not(.nav-cta) > a {
@@ -1829,16 +1887,16 @@ textarea {
 
 @media (max-width: 900px) {
   :root {
-    --header-height: 78px;
+    --header-height: 82px;
   }
 
   .site-header .logo {
-    width: 205px;
-    height: 64px;
+    width: 178px;
+    flex-basis: 178px;
   }
 
   .site-header .logo-img {
-    width: 205px;
+    width: 178px;
   }
 
   .nav-links {
@@ -1851,32 +1909,45 @@ textarea {
 
   .nav-cta .btn {
     width: 100%;
-    height: 46px;
+    height: 48px;
+  }
+
+  .cta-band {
+    align-items: flex-start;
   }
 }
 
 @media (max-width: 640px) {
   :root {
-    --header-height: 72px;
+    --header-height: 74px;
   }
 
   .site-header .logo {
-    width: 185px;
-    height: 58px;
+    width: 158px;
+    flex-basis: 158px;
   }
 
   .site-header .logo-img {
-    width: 185px;
+    width: 158px;
   }
 
   .placeholder-media::before {
-    inset: 22%;
-    opacity: 0.12;
+    inset: 23%;
+    opacity: 0.11;
   }
 
+  .cta-band {
+    min-height: 0;
+    padding: 1.5rem;
+  }
+
+  .cta-band .hero-actions {
+    width: 100%;
+  }
+
+  .cta-band .btn,
   .hero-actions .btn,
-  .form-actions .btn,
-  .cta-band .btn {
+  .form-actions .btn {
     min-height: 48px;
   }
 }
