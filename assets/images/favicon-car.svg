@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Orange sports car">
+  <defs>
+    <linearGradient id="paint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb13b"/>
+      <stop offset="0.58" stop-color="#e68124"/>
+      <stop offset="1" stop-color="#bf5f18"/>
+    </linearGradient>
+  </defs>
+  <path d="M4 41 7 34l10-4 8-10h16l9 10 8 3 3 6v7h-7a8 8 0 0 0-16 0H26a8 8 0 0 0-16 0H4Z" fill="#090c0f" stroke="#090c0f" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M4 41 7 34l10-4 8-10h16l9 10 8 3 3 6v7h-7a8 8 0 0 0-16 0H26a8 8 0 0 0-16 0H4Z" fill="url(#paint)" stroke="#f5a23a" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M27 23h7v8H20Zm10 0h3l7 8H37Z" fill="#111820" stroke="#0a0d10" stroke-width="1"/>
+  <path d="M7 37h8M51 35h6" stroke="#ffd27a" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="18" cy="46" r="7" fill="#090c0f" stroke="#d8dadd" stroke-width="2.5"/>
+  <circle cx="18" cy="46" r="3" fill="#252b31"/>
+  <circle cx="46" cy="46" r="7" fill="#090c0f" stroke="#d8dadd" stroke-width="2.5"/>
+  <circle cx="46" cy="46" r="3" fill="#252b31"/>
+</svg>
