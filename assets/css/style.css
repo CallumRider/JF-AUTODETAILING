@@ -439,3 +439,5 @@ textarea{min-height:140px;resize:vertical}
   .mobile-actions{position:fixed;z-index:900;left:.65rem;right:.65rem;bottom:.65rem;display:grid;grid-template-columns:1fr 1fr;gap:.5rem}.mobile-actions .btn{min-height:48px;box-shadow:0 12px 30px rgba(0,0,0,.4)}.site-footer{padding-bottom:5.5rem}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}.js .reveal{opacity:1;transform:none}}
+
+.footer-contact a{overflow-wrap:anywhere}
