@@ -30,10 +30,15 @@ qsa("[data-year]").forEach((element) => {
 
 const mobileDevicePattern = /Android|iPhone|iPad|iPod|IEMobile|Opera Mini|Mobile/i;
 const mobileUserAgent = Boolean(navigator.userAgentData?.mobile) || mobileDevicePattern.test(navigator.userAgent);
-const touchSizedDevice = navigator.maxTouchPoints > 0 && Math.min(window.screen.width, window.screen.height) <= 900;
 const iPadDesktopMode = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
-const usesSms = () => mobileUserAgent || touchSizedDevice || iPadDesktopMode;
+const usesSms = () => mobileUserAgent || iPadDesktopMode;
 const emailAddress = typeof config.email === "string" ? config.email.trim() : "";
+
+qsa("[data-email-link]").forEach((link) => {
+  if (!emailAddress) return;
+  link.href = `mailto:${emailAddress}`;
+  link.textContent = emailAddress;
+});
 const genericMessage = "Hi JF Auto Detailing, I'd like to ask about a service.";
 
 const buildSmsUrl = (message = "") => {
