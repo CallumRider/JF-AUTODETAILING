@@ -7,7 +7,7 @@ window.JF_SITE_CONFIG = {
   phoneHref: "+447718823290",
   smsUrl: "sms:+447718823290",
   email: "jfautodetailingsupport@gmail.com",
-  hours: "",
+  hours: "Opening hours are currently being confirmed.",
   paymentMethods: "Cash or bank transfer",
   social: {
     instagram: "https://www.instagram.com/jf.auto.details/",
