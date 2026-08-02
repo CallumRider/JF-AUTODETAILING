@@ -12,9 +12,9 @@
 <link rel="apple-touch-icon" href="assets/images/favicon-jf-180.png?v=11" sizes="180x180">
 
 <script>document.documentElement.classList.add('js');</script>
-<link rel="stylesheet" href="assets/css/style.css?v=15">
+<link rel="stylesheet" href="assets/css/style.css?v=16">
 <script defer src="assets/js/site-config.js?v=12"></script>
-<script defer src="assets/js/script.js?v=12"></script>
+<script defer src="assets/js/script.js?v=13"></script>
 </head><body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
@@ -32,7 +32,14 @@
 <section class="section"><div class="container"><div class="location-box reveal">
   <div><span class="section-kicker">How it works</span><h2>Arrange your booking before travelling.</h2><p class="lead">JF cannot travel far, so this is a drop-off service rather than a mobile service. Agree the service and time, leave the vehicle at the arranged Marks Tey location, then collect it when JF confirms the work is finished.</p><div class="button-row" style="margin-top:1.5rem"><a class="btn btn-primary" href="booking.html">Book Now</a><a class="btn btn-secondary" data-phone-link href="tel:+447718823290">Call 07718 823290</a></div></div>
   <div class="location-box-map">
-    <iframe class="location-map" title="Map showing the approximate Marks Tey and Colchester area" src="https://www.google.com/maps?q=Marks%20Tey%2C%20Colchester%2C%20Essex&amp;z=12&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <div class="map-consent" data-map-embed data-map-src="https://www.google.com/maps?q=Marks%20Tey%2C%20Colchester%2C%20Essex&amp;z=12&amp;output=embed">
+      <div class="map-consent-inner">
+        <span class="map-pin" aria-hidden="true">⌖</span>
+        <strong>Approximate Marks Tey area</strong>
+        <p>Load the interactive map to view the area near Colchester. This connects to Google Maps.</p>
+        <button class="btn btn-secondary" type="button" data-load-map>Load map</button>
+      </div>
+    </div>
     <div class="location-box-map-footer"><span>Approximate area only</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Marks+Tey%2C+Colchester%2C+Essex" target="_blank" rel="noopener noreferrer">Open larger map</a></div>
   </div>
 </div></div></section>
@@ -78,6 +85,11 @@
     </div>
     <div class="footer-bottom">
       <span>© <span data-year></span> JF Auto Detailing.</span>
+      <nav class="footer-legal" aria-label="Legal information">
+        <a href="privacy.html">Privacy</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="terms.html">Booking terms</a>
+      </nav>
       <span>Established 2024 · Marks Tey</span>
     </div>
   </div>

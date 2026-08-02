@@ -12,9 +12,9 @@
 <link rel="apple-touch-icon" href="assets/images/favicon-jf-180.png?v=11" sizes="180x180">
 
 <script>document.documentElement.classList.add('js');</script>
-<link rel="stylesheet" href="assets/css/style.css?v=15">
+<link rel="stylesheet" href="assets/css/style.css?v=16">
 <script defer src="assets/js/site-config.js?v=12"></script>
-<script defer src="assets/js/script.js?v=12"></script>
+<script defer src="assets/js/script.js?v=13"></script>
 </head><body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
@@ -48,9 +48,10 @@
       <div class="form-group"><label for="date">Preferred date</label><input id="date" name="date" type="date" required></div>
       <div class="form-group"><label for="time">Preferred time</label><input id="time" name="time" type="text" required placeholder="Morning, afternoon or a time"></div>
       <div class="form-group full"><label for="notes">Anything JF should know?</label><textarea id="notes" name="notes" placeholder="Tell JF about the condition of the vehicle or the result you want"></textarea></div>
+      <div class="form-group full"><label class="check legal-check"><input type="checkbox" name="terms" required><span>I understand this is a booking enquiry, not an automatic confirmation, and I agree to the <a href="terms.html">booking terms</a> and <a href="privacy.html">privacy notice</a>.</span></label></div>
     </div>
     <div class="deposit-alert"><strong>50% deposit required.</strong> Machine polishing and ceramic coating require a 50% deposit.</div>
-    <div class="form-actions"><p class="small" data-message-help>The button prepares a text message for you to send.</p><button class="btn btn-primary" type="submit" data-message-submit>Prepare Text Message</button></div>
+    <p class="form-privacy">The website does not store your booking details. Your device opens the prepared message for you to review and send.</p><div class="form-actions"><p class="small" data-message-help>The button prepares a text message for you to send.</p><button class="btn btn-primary" type="submit" data-message-submit>Prepare Text Message</button></div>
   </form>
   <aside class="side-panel reveal"><span class="section-kicker">What happens next</span><h3>A personal reply from JF.</h3><ul>
     <li>Your message opens with the booking details already filled in.</li>
@@ -99,6 +100,11 @@
     </div>
     <div class="footer-bottom">
       <span>© <span data-year></span> JF Auto Detailing.</span>
+      <nav class="footer-legal" aria-label="Legal information">
+        <a href="privacy.html">Privacy</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="terms.html">Booking terms</a>
+      </nav>
       <span>Established 2024 · Marks Tey</span>
     </div>
   </div>
