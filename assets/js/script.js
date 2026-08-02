@@ -131,6 +131,24 @@ qsa("[data-compare]").forEach((range) => {
   update();
 });
 
+
+qsa("[data-load-map]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const placeholder = button.closest("[data-map-embed]");
+    const src = placeholder?.dataset.mapSrc;
+    if (!placeholder || !src) return;
+
+    const iframe = document.createElement("iframe");
+    iframe.className = "location-map";
+    iframe.title = "Map showing the approximate Marks Tey and Colchester area";
+    iframe.src = src;
+    iframe.loading = "lazy";
+    iframe.referrerPolicy = "no-referrer-when-downgrade";
+    iframe.allowFullscreen = true;
+    placeholder.replaceWith(iframe);
+  });
+});
+
 qsa(".faq-question").forEach((button) => {
   button.addEventListener("click", () => {
     const isOpen = button.getAttribute("aria-expanded") === "true";
