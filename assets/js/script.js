@@ -15,10 +15,6 @@ qsa("[data-phone-link]").forEach((link) => {
   link.href = `tel:${config.phoneHref}`;
 });
 
-qsa("[data-sms-link]").forEach((link) => {
-  link.href = config.smsUrl;
-});
-
 qsa("[data-social]").forEach((link) => {
   const url = config.social?.[link.dataset.social];
   if (url) {
@@ -31,6 +27,57 @@ qsa("[data-social]").forEach((link) => {
 qsa("[data-year]").forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
+
+const mobileDevicePattern = /Android|iPhone|iPad|iPod|IEMobile|Opera Mini|Mobile/i;
+const mobileUserAgent = Boolean(navigator.userAgentData?.mobile) || mobileDevicePattern.test(navigator.userAgent);
+const touchSizedDevice = navigator.maxTouchPoints > 0 && Math.min(window.screen.width, window.screen.height) <= 900;
+const iPadDesktopMode = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+const usesSms = () => mobileUserAgent || touchSizedDevice || iPadDesktopMode;
+const emailAddress = typeof config.email === "string" ? config.email.trim() : "";
+const genericMessage = "Hi JF Auto Detailing, I'd like to ask about a service.";
+
+const buildSmsUrl = (message = "") => {
+  const smsUrl = config.smsUrl || `sms:${config.phoneHref || ""}`;
+  if (!message) return smsUrl;
+  const separator = smsUrl.includes("?") ? "&" : "?";
+  return `${smsUrl}${separator}body=${encodeURIComponent(message)}`;
+};
+
+const buildEmailUrl = (message = genericMessage, subject = "JF Auto Detailing enquiry") => {
+  const recipient = emailAddress;
+  return `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+};
+
+const updateContactMethod = () => {
+  const smsMode = usesSms();
+
+  qsa("[data-sms-link]").forEach((link) => {
+    if (!link.dataset.mobileLabel) link.dataset.mobileLabel = link.textContent.trim() || "Text JF";
+    if (!link.dataset.desktopLabel) link.dataset.desktopLabel = "Email JF";
+
+    link.href = smsMode ? buildSmsUrl() : buildEmailUrl();
+    link.textContent = smsMode ? link.dataset.mobileLabel : link.dataset.desktopLabel;
+    link.setAttribute("aria-label", smsMode ? "Text JF Auto Detailing" : "Email JF Auto Detailing");
+  });
+
+  qsa("[data-message-method-label]").forEach((element) => {
+    element.textContent = smsMode ? "Text message" : "Email enquiry";
+  });
+
+  qsa("[data-message-submit]").forEach((button) => {
+    button.textContent = smsMode ? "Prepare Text Message" : "Prepare Email";
+  });
+
+  qsa("[data-message-help]").forEach((element) => {
+    element.textContent = smsMode
+      ? "The button prepares a text message for you to send."
+      : emailAddress
+        ? "The button opens an email with your enquiry already filled in."
+        : "The button opens an email draft. The recipient will be added once the business email is confirmed.";
+  });
+};
+
+updateContactMethod();
 
 const menuToggle = qs(".menu-toggle");
 const navLinks = qs(".nav-links");
@@ -103,9 +150,10 @@ if (serviceSelect && depositAlert) {
   updateDeposit();
 }
 
-const openSms = (message) => {
-  const separator = config.smsUrl.includes("?") ? "&" : "?";
-  window.location.href = `${config.smsUrl}${separator}body=${encodeURIComponent(message)}`;
+const openPreparedMessage = (message, subject) => {
+  window.location.href = usesSms()
+    ? buildSmsUrl(message)
+    : buildEmailUrl(message, subject);
 };
 
 const bookingForm = qs("[data-booking-form]");
@@ -129,7 +177,7 @@ if (bookingForm) {
       data.get("notes") ? `Notes: ${data.get("notes")}` : ""
     ].filter(Boolean).join("\n");
 
-    openSms(message);
+    openPreparedMessage(message, "JF Auto Detailing booking enquiry");
   });
 }
 
@@ -148,6 +196,6 @@ if (contactForm) {
       `Message: ${data.get("message")}`
     ].join("\n");
 
-    openSms(message);
+    openPreparedMessage(message, "JF Auto Detailing enquiry");
   });
 }
