@@ -1,7 +1,6 @@
 "use strict";
 
 const config = window.JF_SITE_CONFIG || {};
-const emailAddress = (typeof config.email === "string" ? config.email.trim() : "") || "jfautodetailingsupport@gmail.com";
 const qs = (selector, scope = document) => scope.querySelector(selector);
 const qsa = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
@@ -25,23 +24,23 @@ qsa("[data-social]").forEach((link) => {
   }
 });
 
-qsa("[data-email-link]").forEach((link) => {
-  if (!emailAddress) {
-    link.hidden = true;
-    return;
-  }
-  link.href = `mailto:${emailAddress}`;
-  link.textContent = emailAddress;
-});
-
 qsa("[data-year]").forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
 
 const mobileDevicePattern = /Android|iPhone|iPad|iPod|IEMobile|Opera Mini|Mobile/i;
 const mobileUserAgent = Boolean(navigator.userAgentData?.mobile) || mobileDevicePattern.test(navigator.userAgent);
+const touchSizedDevice = navigator.maxTouchPoints > 0 && Math.min(window.screen.width, window.screen.height) <= 900;
 const iPadDesktopMode = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
-const usesSms = () => mobileUserAgent || iPadDesktopMode;
+const usesSms = () => mobileUserAgent || touchSizedDevice || iPadDesktopMode;
+const emailAddress = typeof config.email === "string" ? config.email.trim() : "";
+
+qsa("[data-email-link]").forEach((link) => {
+  if (!emailAddress) return;
+  link.href = `mailto:${emailAddress}`;
+  if (!link.textContent.trim()) link.textContent = emailAddress;
+});
+
 const genericMessage = "Hi JF Auto Detailing, I'd like to ask about a service.";
 
 const buildSmsUrl = (message = "") => {
