@@ -343,9 +343,11 @@ textarea{min-height:140px;resize:vertical}
 .contact-card span{display:block;margin-bottom:.72rem;color:var(--orange-bright);font-family:var(--display);font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .contact-card a{font-family:var(--display);font-size:1.12rem;font-weight:800}.contact-card p{margin-top:.5rem;font-size:.92rem}
 .social-row{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1rem}
-.location-box{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:clamp(1.6rem,4vw,2.8rem);background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--orange)}
-.location-mark{display:grid;place-items:center;min-height:260px;background:radial-gradient(circle,rgba(245,130,32,.17),transparent 42%),repeating-linear-gradient(45deg,rgba(255,255,255,.025) 0 1px,transparent 1px 16px),#0c1014;text-align:center}
-.location-mark strong{font-family:var(--display);font-size:clamp(2rem,5vw,4rem)}.location-mark span{display:block;color:var(--orange-bright);font-family:var(--display);font-size:.78rem;text-transform:uppercase;letter-spacing:.13em}
+.location-box{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,1fr);gap:2rem;padding:clamp(1.6rem,4vw,2.8rem);background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--orange)}
+.location-box-map{display:grid;grid-template-rows:minmax(320px,1fr) auto;min-width:0;overflow:hidden;background:#0c1014;border:1px solid var(--line);border-top:3px solid var(--orange)}
+.location-box-map .location-map{height:100%;min-height:320px}
+.location-box-map-footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1rem;color:#bfc7ce;background:#0b0f13;font-size:.84rem}
+.location-box-map-footer a{color:var(--orange-bright);font-family:var(--display);font-weight:800;white-space:nowrap}
 
 .map-card{overflow:hidden;background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--orange);box-shadow:var(--shadow)}
 .location-map{display:block;width:100%;height:430px;border:0;background:#0c1014}
@@ -376,6 +378,15 @@ textarea{min-height:140px;resize:vertical}
 .review-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.65fr);gap:2rem;align-items:center}
 .review-panel{padding:2rem;border:1px solid var(--orange-line);background:linear-gradient(135deg,rgba(245,130,32,.1),rgba(255,255,255,.02))}
 .review-panel strong{display:block;color:var(--orange-bright);font-family:var(--display);font-size:1.7rem;margin-bottom:.7rem}
+.review-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.review-card{position:relative;min-height:285px;padding:1.55rem;background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--orange)}
+.review-card h3{margin-top:2.25rem;font-size:1.25rem}
+.review-card p{margin-top:.8rem;color:#c6ced5}
+.review-label{display:inline-flex;padding:.35rem .55rem;color:var(--orange-bright);background:rgba(245,130,32,.09);border:1px solid var(--orange-line);font-family:var(--display);font-size:.68rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.review-quote{position:absolute;top:1.15rem;right:1.25rem;color:rgba(245,130,32,.33);font-family:Georgia,serif;font-size:4.5rem;line-height:1}
+.review-source{display:block;margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--line);color:#8f99a3;font-size:.82rem}
+.review-placeholder{background:linear-gradient(145deg,rgba(245,130,32,.07),rgba(17,22,27,.98) 45%)}
+.review-actions{display:flex;justify-content:center;gap:.75rem;margin-top:1.5rem}
 
 .cta-band{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:clamp(1.45rem,3.6vw,2.15rem);background:#141a20;border:1px solid var(--line);border-left:4px solid var(--orange)}
 .cta-band h2{font-size:clamp(1.8rem,3.4vw,2.85rem);max-width:18ch}.cta-band p{margin-top:.55rem;color:#c7ced4}
@@ -423,6 +434,8 @@ textarea{min-height:140px;resize:vertical}
   .nav-socials{display:flex;margin:.6rem 0 .3rem;padding:0 .6rem}
   .nav-cta{margin:.4rem 0 0}.nav-cta .btn{width:100%}
   .hero-grid,.story-grid,.form-shell,.location-box,.review-intro,.availability-band,.location-preview{grid-template-columns:1fr}
+  .review-grid{grid-template-columns:1fr 1fr}
+  .location-box-map{grid-template-rows:minmax(340px,1fr) auto}
   .hero-media{max-width:620px;min-height:500px}.hero-media>img{min-height:500px}
   .section-head{grid-template-columns:1fr;gap:.8rem}
   .compare-copy{padding:0}
@@ -444,7 +457,7 @@ textarea{min-height:140px;resize:vertical}
   .section-head{margin-bottom:1.9rem}
   .hero{padding-top:2.35rem}.hero-media,.hero-media>img{min-height:360px}
   .button-row,.form-actions{flex-direction:column;align-items:stretch}.button-row .btn,.form-actions .btn{width:100%}
-  .rule-grid,.service-list,.extra-grid,.offer-grid,.steps,.form-grid,.checkbox-grid,.footer-grid,.loyalty-card{grid-template-columns:1fr}
+  .rule-grid,.service-list,.extra-grid,.offer-grid,.steps,.form-grid,.checkbox-grid,.footer-grid,.loyalty-card,.review-grid{grid-template-columns:1fr}
   .price-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rule-card:nth-child(odd){border-right:0;margin-right:0}.service-item{grid-template-columns:auto 1fr}.service-price{grid-column:2}
   .compare{aspect-ratio:4/5}
@@ -468,7 +481,11 @@ textarea{min-height:140px;resize:vertical}
   .compare-instruction{margin:-.75rem 0 1.35rem}
   .loyalty-count{width:76px;height:76px;font-size:2.6rem}
   .loyalty-card>.btn{grid-column:auto;width:100%}
-  .map-card-footer{align-items:flex-start;flex-direction:column}
+  .map-card-footer,.location-box-map-footer{align-items:flex-start;flex-direction:column}
+  .location-box-map{grid-template-rows:280px auto}
+  .location-box-map .location-map{min-height:280px}
+  .review-card{min-height:0}
+  .review-actions{flex-direction:column}.review-actions .btn{width:100%}
   body{padding-bottom:64px}
   .mobile-actions{position:fixed;z-index:900;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.5rem .65rem;background:rgba(5,7,9,.96);border-top:1px solid var(--line);backdrop-filter:blur(10px)}.mobile-actions .btn{min-height:46px;box-shadow:0 8px 24px rgba(0,0,0,.3)}.menu-open .mobile-actions{display:none}.site-footer{padding-bottom:1.5rem}
 }
