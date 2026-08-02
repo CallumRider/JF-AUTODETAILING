@@ -438,6 +438,34 @@ textarea{min-height:140px;resize:vertical}
   .map-card-footer{align-items:flex-start;flex-direction:column}
   .mobile-actions{position:fixed;z-index:900;left:.65rem;right:.65rem;bottom:.65rem;display:grid;grid-template-columns:1fr 1fr;gap:.5rem}.mobile-actions .btn{min-height:48px;box-shadow:0 12px 30px rgba(0,0,0,.4)}.site-footer{padding-bottom:5.5rem}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}.js .reveal{opacity:1;transform:none}}
 
-.footer-contact a{overflow-wrap:anywhere}
+/* Preview layout polish — 2 August 2026 */
+.section-head{align-items:center}
+.section-head>p{max-width:44ch;justify-self:end;padding-left:1.05rem;border-left:2px solid rgba(245,130,32,.72);color:#d1d7dc;line-height:1.62}
+.section-head>.btn{justify-self:end;align-self:center}
+.cta-band .button-row{flex:0 0 auto;justify-content:flex-end}
+.form-actions>p{max-width:42ch;color:#d0d6dc}
+.footer-contact a[data-email-link]{overflow-wrap:anywhere;color:#d2d8dd}
+
+@media (max-width:900px){
+  .nav-wrap{padding-right:58px}
+  .menu-toggle{position:absolute;right:0;top:50%;margin:0;transform:translateY(-50%)}
+  .section-head>p{justify-self:start;max-width:58ch}
+  .section-head>.btn{justify-self:start}
+}
+
+@media (max-width:640px){
+  .section-head{gap:1rem;margin-bottom:1.55rem}
+  .section-head>p{width:100%;padding:.05rem 0 .05rem .9rem;font-size:.96rem;line-height:1.58}
+  .section-head>.btn{width:100%;justify-self:stretch;margin-top:.15rem}
+  .story-copy{order:1}
+  .story-photo{order:2;aspect-ratio:16/9;max-height:220px}
+  .story-photo img{object-position:center 58%}
+  .compare{aspect-ratio:5/6}
+  .cta-band .button-row{width:100%;justify-content:stretch}
+  .map-card-footer{gap:.5rem}
+  .mobile-actions{bottom:max(.65rem,env(safe-area-inset-bottom))}
+  .site-footer{padding-bottom:calc(5.5rem + env(safe-area-inset-bottom))}
+}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}.js .reveal{opacity:1;transform:none}}
