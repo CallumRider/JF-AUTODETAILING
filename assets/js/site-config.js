@@ -6,8 +6,8 @@ window.JF_SITE_CONFIG = {
   phoneDisplay: "07718 823290",
   phoneHref: "+447718823290",
   smsUrl: "sms:+447718823290",
-  email: "",
-  hours: "Flexible — arranged with each customer",
+  email: "jfautodetailingsupport@gmail.com",
+  hours: "",
   paymentMethods: "Cash or bank transfer",
   social: {
     instagram: "https://www.instagram.com/jf.auto.details/",
