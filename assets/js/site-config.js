@@ -1,41 +1,23 @@
-/**
- * JF AUTO DETAILING — shared editable website settings
- * ---------------------------------------------------
- * Change common business details here once and every page updates.
- * Values marked PLACEHOLDER must be replaced before the website goes live.
- */
 window.JF_SITE_CONFIG = {
   businessName: "JF Auto Detailing",
-  foundedLabel: "Since 2023",
-  location: "Colchester, Essex",
+  foundedLabel: "Since 2024",
+  location: "Marks Tey, Essex",
   serviceArea: "Colchester and surrounding areas",
-
-  // PLACEHOLDERS — replace before launch.
-  phoneDisplay: "00000 000000",
-  phoneHref: "+440000000000",
-  email: "hello@example.com",
-  whatsappUrl: "#",
-
-  hours: {
-    weekdays: "Text here",
-    saturday: "Text here",
-    sunday: "Text here"
-  },
-
+  phoneDisplay: "07718 823290",
+  phoneHref: "+447718823290",
+  whatsappUrl: "https://wa.me/447718823290",
+  email: "",
+  hours: "Flexible — arranged with each customer",
+  paymentMethods: "Cash or bank transfer",
   social: {
-    instagram: "#",
-    facebook: "#",
-    tiktok: "#"
+    instagram: "https://www.instagram.com/jf.auto.details/",
+    tiktok: "https://www.tiktok.com/@jf.autodetailing",
+    facebook: "https://www.facebook.com/JF.auto.detailing1"
   },
-
-  // Add these once the Google Business Profile is verified.
   googleBusiness: {
-    profileUrl: "#",
-    reviewUrl: "#",
-    mapsUrl: "#",
-    mapsEmbedUrl: ""
+    profileUrl: "",
+    reviewUrl: "",
+    mapsUrl: ""
   },
-
-  footerDescription:
-    "Professional mobile car valeting in Colchester, Essex and surrounding areas. Replace this sentence with the final business description."
+  footerDescription: "Drop-off car valeting and detailing in Marks Tey, serving customers from Colchester and surrounding areas."
 };
