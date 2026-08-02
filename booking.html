@@ -1,90 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Book a mobile car valet in Colchester and surrounding areas.">
-  <meta name="theme-color" content="#0d1014">
-  <title>Book Online | JFAUTODETAILING</title>
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon-car.svg?v=6">
-  <link rel="icon" href="assets/images/favicon-car.ico?v=6" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-car-32.png?v=6">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-car-16.png?v=6">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-car-180.png?v=6">
-  <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/site-config.js" defer></script>
-  <script src="assets/js/script.js" defer></script>
-</head>
-<body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="logo" href="index.html" aria-label="JFAUTODETAILING homepage"><img class="logo-img" src="assets/images/jf-logo.png" alt="JF Auto Detailing logo" width="1000" height="435" decoding="async" fetchpriority="high"></a>
-    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
-    <nav aria-label="Main navigation">
-      <ul class="nav-links" id="main-navigation">
-        <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
-        <li class="nav-cta"><a class="btn btn-primary" href="booking.html">Book Now</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main id="main-content">
-<section class="page-hero"><div class="container"><span class="eyebrow">Online booking</span><h1>Book your valet in a few steps.</h1><p>This front-end template shows the intended journey. Connect it to a real booking service, email handler or database before launch.</p></div></section>
-<section class="section"><div class="container"><div class="notice" style="max-width:920px;margin:0 auto 1rem">This is currently a booking request form. Live availability, automatic confirmation and payments can be connected later without redesigning the page.</div><form class="form-card reveal" data-booking-form method="post" action="#" novalidate>
-<div class="step-indicator" aria-label="Booking progress"><div class="step-dot active">1. Vehicle</div><div class="step-dot">2. Service</div><div class="step-dot">3. Date</div><div class="step-dot">4. Address</div><div class="step-dot">5. Details</div></div>
-<section class="booking-step active"><h2>Vehicle type</h2><p style="margin:.5rem 0 1.5rem">Tell us what we will be working on.</p><div class="form-grid"><div class="form-group"><label for="vehicle-size">Vehicle size</label><select id="vehicle-size" name="vehicle_size" required><option value="">Select one</option><option>Small</option><option>Medium</option><option>Large</option><option>Van / commercial</option></select></div><div class="form-group"><label for="vehicle-model">Make and model</label><input id="vehicle-model" name="vehicle_model" placeholder="e.g. Ford Fiesta" required></div><div class="form-group full"><label for="condition">Current condition</label><textarea id="condition" name="vehicle_condition" placeholder="Text here — dirt level, stains, pet hair, concerns"></textarea></div></div><div class="form-actions"><span></span><button class="btn btn-primary" type="button" data-next>Next</button></div></section>
-<section class="booking-step"><h2>Select a service</h2><p style="margin:.5rem 0 1.5rem">Choose the closest package. Final details can be confirmed later.</p><div class="form-group"><label for="service">Service</label><select id="service" name="service" required><option value="">Select one</option><option>Exterior Wash</option><option>Interior Valet</option><option>Full Valet</option><option>Deep Clean</option><option>Machine Polishing</option><option>Ceramic Coating</option><option>Fleet / Commercial</option></select></div><div class="form-actions"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn btn-primary" type="button" data-next>Next</button></div></section>
-<section class="booking-step"><h2>Date and time</h2><p style="margin:.5rem 0 1.5rem">Replace the basic fields with live availability when the booking platform is connected.</p><div class="form-grid"><div class="form-group"><label for="booking-date">Preferred date</label><input id="booking-date" name="preferred_date" type="date" required></div><div class="form-group"><label for="booking-time">Preferred time</label><select id="booking-time" name="preferred_time" required><option value="">Select one</option><option>Morning</option><option>Afternoon</option><option>Specific time — add options</option></select></div></div><div class="form-actions"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn btn-primary" type="button" data-next>Next</button></div></section>
-<section class="booking-step"><h2>Service address</h2><p style="margin:.5rem 0 1.5rem">Used for mobile valeting and checking the travel area.</p><div class="form-grid"><div class="form-group full"><label for="address">Address</label><input id="address" name="address_line" placeholder="House number and street" required></div><div class="form-group"><label for="town">Town / village</label><input id="town" name="town" placeholder="Colchester" required></div><div class="form-group"><label for="postcode">Postcode</label><input id="postcode" name="postcode" placeholder="CO0 0AA" required></div></div><div class="form-actions"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn btn-primary" type="button" data-next>Next</button></div></section>
-<section class="booking-step"><h2>Your details</h2><p style="margin:.5rem 0 1.5rem">Add customer contact details and any final notes.</p><div class="form-grid"><div class="form-group"><label for="name">Name</label><input id="name" name="customer_name" autocomplete="name" required placeholder="Your name"></div><div class="form-group"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Phone number"></div><div class="form-group full"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div><div class="form-group full"><label for="notes">Notes</label><textarea id="notes" name="notes" placeholder="Text here — access, parking, water/electricity, special requests"></textarea></div></div><div class="form-actions"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn btn-primary" type="submit">Confirm booking request</button></div><div class="success-message" role="status"><h3>Booking request received — template only</h3><p>Connect this form to your chosen booking system to send a real confirmation.</p></div></section>
-</form></div></section>
-</main>
-<div class="mobile-actions" aria-label="Quick contact actions">
-  <a class="btn btn-secondary" data-phone-link href="tel:+440000000000">Call</a>
-  <a class="btn btn-primary" href="booking.html">Book Now</a>
-</div>
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a class="logo footer-logo" href="index.html" aria-label="JFAUTODETAILING homepage"><img class="logo-img" src="assets/images/jf-logo.png" alt="JF Auto Detailing logo" width="1000" height="435" loading="lazy" decoding="async"></a>
-        <p><span data-config-text="footerDescription">Professional mobile car valeting in Colchester, Essex and surrounding areas. Replace this sentence with the final business description.</span></p>
-      </div>
-      <div>
-        <h4>Quick links</h4>
-        <ul class="footer-links">
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="booking.html">Book online</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Information</h4>
-        <ul class="footer-links">
-          <li><a href="about.html">About us</a></li>
-          <li><a href="areas.html">Areas covered</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="faq.html">FAQs</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul class="footer-links">
-          <li><a data-phone-link href="tel:+440000000000">Phone: <span data-config-text="phoneDisplay">00000 000000</span></a></li>
-          <li><a data-email-link href="mailto:hello@example.com">Email: <span data-config-text="email">hello@example.com</span></a></li>
-          <li>Hours: <span data-config-text="hours.weekdays">Text here</span></li>
-          <li data-config-text="location">Colchester, Essex</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span data-year></span> JFAUTODETAILING. All rights reserved.</span>
-      <span>Privacy Policy · Terms · Cookie Policy</span>
-    </div>
-  </div>
-</footer>
-</body>
-</html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<meta content="Request a JF Auto Detailing appointment in Marks Tey." name="description"/><meta content="#080a0c" name="theme-color"/>
+<title>Request a Booking | JF Auto Detailing</title>
+<link href="assets/images/favicon-car.ico?v=8" rel="icon" sizes="any"/>
+<link href="assets/images/favicon-car.svg?v=8" rel="icon" type="image/svg+xml"/>
+<link href="assets/images/favicon-car-32.png?v=8" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/images/favicon-car-180.png?v=8" rel="apple-touch-icon" sizes="180x180"/>
+<script>document.documentElement.classList.add('js');</script>
+<link href="assets/css/style.css?v=8" rel="stylesheet"/>
+<script defer="" src="assets/js/site-config.js?v=8"></script><script defer="" src="assets/js/script.js?v=8"></script>
+</head><body><a class="skip-link" href="#main-content">Skip to main content</a><header class="site-header"><div class="container nav-wrap">
+<a aria-label="JF Auto Detailing homepage" class="logo" href="index.html"><img alt="JF Auto Detailing — since 2024" class="logo-img" fetchpriority="high" height="280" src="assets/images/jf-logo-2024.webp" width="740"/></a>
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button"><span></span></button>
+<nav aria-label="Main navigation"><ul class="nav-links" id="main-navigation"><li><a class="" href="index.html">Home</a></li><li><a class="" href="services.html">Services</a></li><li><a class="" href="pricing.html">Pricing</a></li><li><a class="" href="gallery.html">Gallery</a></li><li><a class="" href="about.html">About</a></li><li><a class="" href="contact.html">Contact</a></li><li class="nav-cta"><a class="btn btn-primary" href="booking.html">Book Now</a></li></ul></nav>
+</div></header><main id="main-content"><section class="page-hero"><div class="container"><span class="eyebrow">Booking request</span><h1>Arrange a date that works for both of you.</h1><p>Complete the form and it will open a prepared WhatsApp message. The appointment is only booked once JF replies and confirms the date.</p></div></section><section class="section"><div class="container form-shell"><form class="form-card reveal" data-booking-form=""><div class="form-grid"><div class="form-group"><label for="name">Your name</label><input autocomplete="name" id="name" name="name" required=""/></div><div class="form-group"><label for="phone">Phone number</label><input autocomplete="tel" id="phone" name="phone" required="" type="tel"/></div><div class="form-group full"><label for="vehicle">Vehicle make and model</label><input id="vehicle" name="vehicle" placeholder="e.g. Ford Fiesta" required=""/></div><div class="form-group full"><label for="service">Service</label><select id="service" name="service" required=""><option value="">Choose a service</option><option value="Exterior Valet">Exterior Valet — £25</option><option value="Interior Valet">Interior Valet — £25</option><option value="Full Valet">Full Valet — £40</option><option value="Deep Interior Clean">Deep Interior Clean — From £70</option><option value="Seat Extraction">Seat Extraction — £15 per seat</option><option value="Floor Mat Extraction">Floor Mat Extraction — £10 each</option><option value="Engine Bay Detail">Engine Bay Detail — £20</option><option value="Clay Bar Decontamination">Clay Bar Decontamination — From £30</option><option value="Machine Polishing">Machine Polishing — From £130</option><option value="Ceramic Coating (2 year)">Ceramic Coating (2 year) — From £110</option></select><div class="deposit-alert">Machine polishing and ceramic coating require a 50% deposit.</div></div><fieldset class="form-group full"><legend>Optional extras</legend><div class="checkbox-grid"><label class="check"><input name="extras" type="checkbox" value="Spray Sealant"/><span>Spray Sealant — £10</span></label><label class="check"><input name="extras" type="checkbox" value="Headlight Restoration"/><span>Headlight Restoration — From £40</span></label><label class="check"><input name="extras" type="checkbox" value="Pet Hair Removal"/><span>Pet Hair Removal — From £15</span></label><label class="check"><input name="extras" type="checkbox" value="Excessive Mud / Sand Surcharge"/><span>Excessive Mud / Sand Surcharge — From £10</span></label></div></fieldset><div class="form-group"><label for="date">Preferred date</label><input id="date" name="date" required="" type="date"/></div><div class="form-group"><label for="time">Preferred time</label><input id="time" name="time" placeholder="e.g. Morning or 2pm" required=""/></div><div class="form-group full"><label for="notes">Vehicle condition or anything JF should know</label><textarea id="notes" name="notes" placeholder="Pet hair, heavy mud, stains, access details or questions"></textarea></div></div><div class="form-actions"><p class="small">This sends your details through WhatsApp for confirmation.</p><button class="btn btn-primary" type="submit">Send Booking Request</button></div></form><aside class="side-panel reveal"><h3>How it works</h3><ul><li>Choose the service and a preferred date.</li><li>JF replies to agree a suitable time.</li><li>Drop the vehicle off in Marks Tey.</li><li>Collect it when the agreed work is complete.</li><li>No deposit unless booking machine polishing or ceramic coating.</li><li>Payment by cash or bank transfer.</li></ul><div class="form-note">Access to a hose tap and electrical plug is required. Appointments can be rescheduled if the weather is unsuitable.</div></aside></div></section></main><div aria-label="Quick actions" class="mobile-actions"><a class="btn btn-secondary" data-phone-link="" href="tel:+447718823290">Call</a><a class="btn btn-primary" data-whatsapp-link="" href="https://wa.me/447718823290">WhatsApp</a></div>
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><a class="logo footer-logo" href="index.html"><img alt="JF Auto Detailing" class="logo-img" height="280" loading="lazy" src="assets/images/jf-logo-2024.webp" width="740"/></a><p data-config-text="footerDescription">Drop-off car valeting and detailing in Marks Tey.</p></div>
+<div><h4>Explore</h4><ul class="footer-links"><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="gallery.html">Results</a></li><li><a href="booking.html">Request a booking</a></li></ul></div>
+<div><h4>Information</h4><ul class="footer-links"><li><a href="about.html">About JF</a></li><li><a href="areas.html">Drop-off location</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="faq.html">FAQs</a></li></ul></div>
+<div><h4>Contact</h4><ul class="footer-links"><li><a data-phone-link="" href="tel:+447718823290">07718 823290</a></li><li>Marks Tey, Essex</li><li>Hours arranged with each customer</li><li>Cash or bank transfer</li></ul><div class="social-row"><a class="social-link" data-social="instagram" href="#">Instagram</a><a class="social-link" data-social="tiktok" href="#">TikTok</a><a class="social-link" data-social="facebook" href="#">Facebook</a></div></div>
+</div><div class="footer-bottom"><span>© <span data-year=""></span> JF Auto Detailing.</span><span>Established 2024 · Marks Tey</span></div></div></footer></body></html>
