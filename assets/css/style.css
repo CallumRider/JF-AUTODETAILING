@@ -164,7 +164,7 @@ p+p{margin-top:1rem}
   transition:color .18s ease,border-color .18s ease,background .18s ease,transform .18s var(--ease);
 }
 .social-icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.social-icon[data-social="facebook"] svg{width:16px;height:16px;fill:currentColor;stroke:none}
+.social-icon[data-social="facebook"] svg{width:18px;height:18px;fill:currentColor;stroke:none}
 .social-icon:hover{color:#fff;border-color:var(--orange);background:rgba(245,130,32,.11);transform:translateY(-1px)}
 .nav-cta{margin-left:.4rem}
 .nav-cta .btn{height:46px;min-height:46px;padding:0 1.2rem}
